@@ -1,0 +1,241 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    --bodyBg: #141519;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background: var(--bodyBg);
+    color: #fff;
+    font-family: 'Overpass', sans-serif;
+}
+
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+section {
+    background: #1c232d;
+    border-radius: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1{
+    margin-block: 20px;
+    align-self: flex-start;
+}
+
+p {
+    margin-block: 20px;
+    text-align: left;
+}
+
+button {
+    background: var(--orange);
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 100%;
+    cursor: pointer;
+    margin-block-start: 20px;
+    font-size: 18px;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    position: absolute;
+    opacity: 0;
+}
+
+form {
+    counter-reset: count 0;
+}
+
+input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+}
+  
+input[type="radio"] + label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    /*margin-left: 2rem;
+    margin-bottom: 0.5rem; */
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+input[type="radio"] + label::before {
+    content: counter(count);
+    position: absolute;
+    display: inline-block;
+    left: -56px;
+    width: 48px;
+    height: 48px;
+    background: #243036;
+    border-radius: 50%;
+    border: 1px solid var(--mediumGrey);
+    counter-increment: count;
+    color: #fff;
+    padding-top: 10px;
+}
+
+input[type="radio"] + label::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: -56px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    padding-top: 10px;
+}
+  
+input[type="radio"]:checked + label::after {
+    content: counter(count); /* have to add this - can't use z-index */
+    background: var(--lightGrey);
+    color: #fff;
+    font-weight: 700;
+}
+ 
+input[type="radio"]:hover + label::after {
+    content: counter(count); 
+    background: var(--orange);
+    color: #fff;
+    font-weight: 700;
+}
+
+input[type="radio"]:focus + label::before {
+    outline: 1px solid #fff;
+}
+
+label {
+    color: #1c232d; /* has to make background of section tag */
+    user-select: none;
+    text-align: center;
+}
+
+.star-wrapper {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #243036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.thank-you-styling {
+    align-items: center;
+}
+
+.thank-you-styling p {
+    text-align: center;
+    padding-inline: 10px;
+    max-width: 40ch;
+}
+
+.thank-you-styling img {
+    margin-block-end: 20px;
+}
+
+.ratingParagraphWrapper {
+    background: #243036;
+    font-size: 18px;
+    font-weight: bolder;
+    width: 50%;
+    height: 45px;
+    padding: 0;
+    border-radius: 24px;
+    align-self: center;
+    line-height: 0.5rem;
+    color: var(--orange);
+    margin-block-end: 20px;
+}
+
+@media (min-width: 700px){
+    section {
+        width: 500px;
+        text-align: center;
+    }
+}
