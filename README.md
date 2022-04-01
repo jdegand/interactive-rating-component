@@ -58,6 +58,6 @@ Users should be able to:
 - [Stack Overflow](https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting) - user-select property
 - [CSS Tricks](https://css-tricks.com/displaying-the-current-step-with-css-counters/) -  CSS Counters
 - [TechieDelight](https://www.techiedelight.com/get-value-of-selected-radio-button-javascript/) - get selected radio button
-- [Coderwall](https://coderwall.com/p/nygghw/don-t-use-innerhtml-to-empty-dom-elements) - dont use innerHTML = ''
+- [Coderwall](https://coderwall.com/p/nygghw/don-t-use-innerhtml-to-empty-dom-elements) - dont use innerHTML = "&nbsp;"
 - [Geeks for Geeks](https://www.geeksforgeeks.org/remove-all-the-child-elements-of-a-dom-node-in-javascript/#:~:text=Child%20nodes%20can%20be%20removed,which%20produces%20the%20same%20output.) - remove all child elements of a DOM node
 - [UX Movement](https://uxmovement.com/buttons/the-myths-of-color-contrast-accessibility/) - color contrast accessibility
